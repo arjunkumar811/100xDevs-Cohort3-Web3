@@ -12,3 +12,24 @@ Answer
 2^0: 0×20=0×1=0
 = 202 
 */
+
+
+
+/*
+Bit
+const x = 0;
+console.log(x);
+*/
+
+
+/*
+Byte
+const x = 202
+console.log(x);
+*/
+
+/*
+Array of bytes
+const bytes = [202, 244, 1, 23]
+console.log(bytes);
+*/
