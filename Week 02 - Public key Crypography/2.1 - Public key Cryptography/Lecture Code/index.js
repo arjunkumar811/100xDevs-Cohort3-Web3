@@ -33,3 +33,10 @@ Array of bytes
 const bytes = [202, 244, 1, 23]
 console.log(bytes);
 */
+
+/*
+Uint8Array
+a better way to represent an array of bytes is to use a UInt8Array in js
+
+let bytes = new UInt8Array([0, 255, 127, 128]);
+console.log(bytes)
