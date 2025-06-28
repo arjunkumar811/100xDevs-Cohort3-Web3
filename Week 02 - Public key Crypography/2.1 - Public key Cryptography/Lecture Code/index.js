@@ -28,28 +28,31 @@ const x = 202
 console.log(x);
 */
 
-/*
-Array of bytes
-const bytes = [202, 244, 1, 23]
-console.log(bytes);
-*/
+
+// Array of bytes
+const byteArray = [202, 244, 1, 23]
+console.log(byteArray);
+
 
 /*
 Uint8Array
 a better way to represent an array of bytes is to use a UInt8Array in js
+*/
 
 let bytes = new UInt8Array([0, 255, 127, 128]);
-console.log(bytes)*/
+console.log(bytes)
+
 
 
 
 /*
 What do you think happens to the first element here? Does it throw an error?
-
+*/
 let uint8Arr = new Uint8Array([0, 255, 127, 128]);
 uint8Arr[1] = 300;
 console.log(uint8Arr) // Uint8Array(4) [ 0, 44, 127, 128 ]
 
+/*
 soln: 300 % 256 = 44 (overflow), 256 + 44 => 300✅
 
 */
