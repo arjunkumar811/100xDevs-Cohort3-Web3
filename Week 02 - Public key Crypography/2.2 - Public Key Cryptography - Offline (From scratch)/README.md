@@ -314,6 +314,8 @@ console.log("Encrypted Text:", encryptedText);
 console.log("Decrypted Text:", decryptedText);
 ```
 
+## Step 5
+
 ## Asymmetric encryption
 
 Asymmetric encryption, also known as public-key cryptography, is a type of encryption that uses a pair of keys: a public key and a private key. The keys are mathematically related, but it is computationally infeasible to derive the private key from the public key.
@@ -348,3 +350,41 @@ Asymmetric encryption, also known as public-key cryptography, is a type of encry
 - Blockchains and cryptocurrencies
 
 ![alt text](image.png)
+
+---
+
+## 6 step
+
+# Creating a public/private keypair
+
+Let's look at various ways of creating public/private keypairs, signing messages and verifying them
+
+![notion image](https://example.com/keypair-creation-image)
+
+## EdDSA - Edwards-curve Digital Signature Algorithm - ED25519
+
+### Using @noble/ed25519
+
+```javascript
+// Example using @noble/ed25519
+```
+
+### Using @solana/web3.js
+
+```javascript
+// Example using @solana/web3.js
+```
+
+## ECDSA (Elliptic Curve Digital Signature Algorithm) - secp256k1
+
+### Using @noble/secp256k1
+
+```javascript
+// Example using @noble/secp256k1
+```
+
+### Using ethers
+
+```javascript
+// Example using ethers
+```
