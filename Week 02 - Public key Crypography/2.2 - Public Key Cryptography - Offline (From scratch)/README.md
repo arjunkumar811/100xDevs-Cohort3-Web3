@@ -482,3 +482,19 @@ for (let i = 0; i < 4; i++) {
 Ref SOL - [Solana Config](https://github.com/coral-xyz/backpack/blob/master/packages/secure-background/src/blockchain-configs/solana/config.ts#L38)
 
 [Solana Util](https://github.com/coral-xyz/backpack/blob/master/packages/secure-background/src/services/svm/util.ts#L22)
+
+---
+
+## 10 step
+
+# Assignments
+
+## Adding support for ETH
+
+Given we just derived a few public keys in SOL, can you try doing the same for ETH?
+
+Again for reference, this is how backpack does it - [Backpack EVM Util](https://github.com/coral-xyz/backpack/blob/master/packages/secure-background/src/services/evm/util.ts#L3)
+
+## Creating a web based wallet
+
+Create a simple web based wallet where someone can come and create a mnemonic, add multiple wallets and see the public key associated with each wallet
