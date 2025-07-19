@@ -1,4 +1,5 @@
 # Public Key Cryptography
+
 # Steps 1 - 10
 
 ## 1 step
@@ -57,3 +58,73 @@ By the end of this module, you should understand:
 - How public-private key pairs work in blockchain systems
 - The importance of private key security
 - How to generate and manage cryptocurrency wallets
+
+---
+
+## 2 step
+
+# Bits and bytes
+
+## What is a Bit?
+
+A bit is the smallest unit of data in a computer and can have one of two values: 0 or 1.
+
+Think of a bit like a light switch that can be either off (0) or on (1).
+
+![notion image](https://example.com/bit-image)
+
+## What is a byte?
+
+A byte is a group of 8 bits. It's the standard unit of data used to represent a single character in memory. Since each bit can be either 0 or 1, a byte can have 2^8 (256) possible values, ranging from 0 to 255
+
+## Assignment
+
+What is the 11001010 converted to a decimals ?
+
+**Answer:** 202
+
+## Representing bits and bytes in JS
+
+### Bit
+
+```javascript
+const x = 0;
+console.log(x);
+```
+
+### Byte
+
+```javascript
+const x = 202;
+console.log(x);
+```
+
+### Array of bytes
+
+```javascript
+const bytes = [202, 244, 1, 23];
+console.log(bytes);
+```
+
+### UInt8Array
+
+A better way to represent an array of bytes is to use a UInt8Array in JS
+
+```javascript
+let bytes = new Uint8Array([0, 255, 127, 128]);
+console.log(bytes);
+```
+
+## Why use UInt8Array over native arrays ?
+
+- They use less space. Every number takes 64 bits (8 bytes). But every value in a UInt8Array takes 1 byte.
+- UInt8Array Enforces constraints - It makes sure every element doesn't exceed 255.
+
+## Assignment
+
+What do you think happens to the first element here? Does it throw an error?
+
+```javascript
+let uint8Arr = new Uint8Array([0, 255, 127, 128]);
+uint8Arr[1] = 300;
+```
