@@ -28,3 +28,13 @@ function base58ToUint8Array(base58String) {
 const base58 = base58String; // Use the previously encoded Base58 string
 const byteArrayFromBase58 = base58ToUint8Array(base58);
 console.log(byteArrayFromBase58); // Output: Uint8Array(5) [72, 101, 108, 10
+
+
+
+
+
+/*Ascii vs UTF-8
+ASCII uses a 7-bit encoding scheme.
+UTF-8 uses 1 to 4 bytes to encode each character.
+https://www.fileformat.info/info/charset/UTF-8/list.htm
+*/ 
