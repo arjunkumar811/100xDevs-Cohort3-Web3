@@ -1,6 +1,7 @@
 # Public Key Cryptography
+# Steps 1 - 10
 
-## 1 of 10
+## 1 step
 
 # Banks vs Blockchains
 
