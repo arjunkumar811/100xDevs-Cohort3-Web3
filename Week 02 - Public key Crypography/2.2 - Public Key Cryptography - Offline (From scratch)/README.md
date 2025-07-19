@@ -29,8 +29,6 @@ A public-private key pair is a set of two keys used in asymmetric cryptography. 
 
 **Public Key:** The public key is a string that can be shared openly.
 
-![notion image](https://example.com/public-key-image)
-
 For example - https://etherscan.io/address/0xD9a657ACB3960DB92AaaA32942019bD3c473FCCB
 
 **Private key:** The private key is a secret string that must be kept confidential.
