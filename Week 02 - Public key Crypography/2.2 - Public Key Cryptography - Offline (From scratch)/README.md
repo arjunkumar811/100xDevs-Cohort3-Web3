@@ -128,3 +128,121 @@ What do you think happens to the first element here? Does it throw an error?
 let uint8Arr = new Uint8Array([0, 255, 127, 128]);
 uint8Arr[1] = 300;
 ```
+
+---
+
+## 3 step
+
+# Encodings
+
+Bytes are cool but highly unreadable. Imagine telling someone:
+
+_Hey, my name is 00101011101010101020_
+
+It's easier to encode data so it is more human readable. Some common encodings include:
+
+- Ascii
+- Hex
+- Base64
+- Base58
+
+## Ascii
+
+**1 character = 7 bits**
+
+Every byte corresponds to a text on the computer.
+
+Here is a complete list - [ASCII Character Set](https://www.w3schools.com/charsets/ref_html_ascii.asp#:~:text=The ASCII Character Set&text=ASCII is a 7-bit,are all based on ASCII.)
+
+### Bytes to Ascii
+
+```javascript
+// Convert bytes to ASCII
+```
+
+### Ascii to bytes
+
+```javascript
+// Convert ASCII to bytes
+```
+
+### UInt8Array to ascii
+
+```javascript
+// Convert UInt8Array to ASCII
+```
+
+### Ascii to UInt8Array
+
+```javascript
+// Convert ASCII to UInt8Array
+```
+
+![notion image](https://example.com/ascii-image)
+
+## Hex
+
+**1 character = 4 bits**
+
+A single hex character can be any of the 16 possible values: 0-9 and A-F.
+
+### Array to hex
+
+```javascript
+// Convert array to hex
+```
+
+### Hex to array
+
+```javascript
+// Convert hex to array
+```
+
+Ref - [parseInt() - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+
+![notion image](https://example.com/hex-image)
+
+## Base64
+
+**1 character = 6 bits**
+
+Base64 encoding uses 64 different characters (A-Z, a-z, 0-9, +, /), which means each character can represent one of 64 possible values.
+
+- [Base64 Encode](https://www.base64encode.org/)
+- [Base64 Decode](https://www.base64decode.org/)
+
+### Encode
+
+```javascript
+// Base64 encoding example
+```
+
+## Base58
+
+It is similar to Base64 but uses a different set of characters to avoid visually similar characters and to make the encoded output more user-friendly.
+
+Base58 uses 58 different characters:
+
+- Uppercase letters: A-Z (excluding I and O)
+- Lowercase letters: a-z (excluding l)
+- Numbers: 1-9 (excluding 0)
+- +, /
+
+### Encode
+
+```javascript
+// Base58 encoding example
+```
+
+### Decode
+
+```javascript
+// Base58 decoding example
+```
+
+## Ascii vs UTF-8
+
+- **ASCII** uses a 7-bit encoding scheme.
+- **UTF-8** uses 1 to 4 bytes to encode each character.
+
+[UTF-8 Character List](https://www.fileformat.info/info/charset/UTF-8/list.htm)
