@@ -19,8 +19,6 @@ In traditional banks, you have a username and password that are enough for you t
 - Transfer funds
 - Look at your existing transactions
 
-![notion image](https://example.com/bank-auth-image)
-
 ## How Blockchains do auth
 
 If you ever want to create an account on a blockchain, you need to generate a public-private keypair.
@@ -36,8 +34,6 @@ A public-private key pair is a set of two keys used in asymmetric cryptography. 
 For example - https://etherscan.io/address/0xD9a657ACB3960DB92AaaA32942019bD3c473FCCB
 
 **Private key:** The private key is a secret string that must be kept confidential.
-
-![notion image](https://example.com/private-key-image)
 
 ---
 
@@ -70,8 +66,6 @@ By the end of this module, you should understand:
 A bit is the smallest unit of data in a computer and can have one of two values: 0 or 1.
 
 Think of a bit like a light switch that can be either off (0) or on (1).
-
-![notion image](https://example.com/bit-image)
 
 ## What is a byte?
 
@@ -178,8 +172,6 @@ Here is a complete list - [ASCII Character Set](https://www.w3schools.com/charse
 // Convert ASCII to UInt8Array
 ```
 
-![notion image](https://example.com/ascii-image)
-
 ## Hex
 
 **1 character = 4 bits**
@@ -199,8 +191,6 @@ A single hex character can be any of the 16 possible values: 0-9 and A-F.
 ```
 
 Ref - [parseInt() - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-
-![notion image](https://example.com/hex-image)
 
 ## Base64
 
@@ -257,8 +247,6 @@ Base58 uses 58 different characters:
 
 Hashing is a process of converting data (like a file or a message) into a fixed-size string of characters, which typically appears random.
 
-![notion image](https://example.com/hashing-image)
-
 **Common hashing algorithms:** SHA-256, MD5
 
 ## Encryption
@@ -276,8 +264,6 @@ Encryption is the process of converting plaintext data into an unreadable format
 2. **Asymmetric encryption:** Different keys are used for encryption (public key) and decryption (private key).
 
 ## Symmetric encryption
-
-![notion image](https://example.com/symmetric-encryption-image)
 
 ### Code
 
@@ -324,15 +310,11 @@ Asymmetric encryption, also known as public-key cryptography, is a type of encry
 
 **Private Key:** The private key is a secret cryptographic code that must be kept confidential. It is used to decrypt data encrypted with the corresponding public key or to create digital signatures.
 
-![notion image](https://example.com/asymmetric-encryption-image)
-
 ### Common Asymmetric Encryption Algorithms:
 
 - **RSA** - Rivest–Shamir–Adleman
 - **ECC** - Elliptic Curve Cryptography (ECDSA) - ETH and BTC
 - **EdDSA** - Edwards-curve Digital Signature Algorithm - SOL
-
-![notion image](https://example.com/elliptic-curves-image)
 
 ### How elliptic curves work
 
@@ -358,8 +340,6 @@ Asymmetric encryption, also known as public-key cryptography, is a type of encry
 # Creating a public/private keypair
 
 Let's look at various ways of creating public/private keypairs, signing messages and verifying them
-
-![notion image](https://example.com/keypair-creation-image)
 
 ## EdDSA - Edwards-curve Digital Signature Algorithm - ED25519
 
