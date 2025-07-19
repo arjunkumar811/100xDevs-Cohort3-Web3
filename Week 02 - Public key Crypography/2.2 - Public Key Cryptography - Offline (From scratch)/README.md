@@ -393,3 +393,19 @@ Ref - [Anders Brownworth's Blockchain Demo](https://andersbrownworth.com/blockch
 2. Verifies the signature using the users public key and the hash generated in step 1
 3. Transaction validation - The miner/validator checks additional aspects of the transaction, such as ensuring the user has sufficient funds
 4. If everything checks out, adds the transaction to the block
+
+---
+
+## 8 step
+
+# Hierarchical Deterministic (HD) Wallet
+
+Hierarchical Deterministic (HD) wallets are a type of wallet that can generate a tree of key pairs from a single seed. This allows for the generation of multiple addresses from a single root seed, providing both security and convenience.
+
+## Problem
+
+You have to maintain/store multiple public private keys if you want to have multiple wallets.
+
+## Solution - BIP-32
+
+Bitcoin Improvement Proposal 32 (BIP-32) provided the solution to this problem in 2012. It was proposed by Pieter Wuilla, a Bitcoin Core developer, to simplify the recovery process of crypto wallets. BIP-32 introduced a hierarchical tree-like structure for wallets that allowed you to manage multiple accounts much more easily than was previously possible. It's essentially a standardized way to derive private and public keys from a master seed.
