@@ -388,3 +388,5 @@ Let's look at various ways of creating public/private keypairs, signing messages
 ```javascript
 // Example using ethers
 ```
+
+![alt text](image-1.png)
