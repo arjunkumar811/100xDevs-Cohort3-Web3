@@ -29,3 +29,17 @@ How ethers does it under the hood - https://github.com/ethers-io/ethers.js/blob/
 ## Solana
 
 Solana public keys are 32 bytes (5W4oGgDHqir3KNEcmiMn6tNHmbWjC7PgW11sk4AwWbpe). No need for hashing/chopping
+
+# Frontend vs Backend, HTTP Servers
+
+Backend servers in full stack are servers which run your backend logic.
+
+Your frontend talks to them through HTTP calls.
+
+![Screenshot 2024-08-16 at 7.14.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/085e8ad8-528e-47d7-8922-a23dc4016453/3c291585-afe9-4138-bed7-a1ee88ebb7ff/Screenshot_2024-08-16_at_7.14.47_PM.png)
+
+For example - https://jsonplaceholder.typicode.com/posts/1
+
+### Postman
+
+Postman is an application that lets you send requests to Backend servers without using the browser
