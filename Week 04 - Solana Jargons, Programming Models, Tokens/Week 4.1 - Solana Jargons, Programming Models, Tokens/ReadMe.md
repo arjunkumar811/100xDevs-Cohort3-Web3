@@ -20,6 +20,7 @@ In today's class, we'll understand about one of the biggest use-case that blockc
 ETH was one of the first blockchains to introduce the `concept` of decentralized `state` / `programs`. These are popularly known as `smart contracts` on the ETH blockchain.
 
 - Here is a simple ETH smart contract
+
   ```jsx
   // SPDX-License-Identifier: MIT
   pragma solidity ^0.8.0;
@@ -50,7 +51,9 @@ ETH was one of the first blockchains to introduce the `concept` of decentralized
   }
 
   ```
+
 - Here is a simple Node.js HTTP server that does something similar
+
   ```jsx
   const express = require("express");
   const app = express();
@@ -94,3 +97,19 @@ HTTP Servers are deployed on cloud providers like `GCP, Azure`
 Smart contracts/programs are deployed on the `blockchain`
 
 The way solana programs work is significantly different from other blockchains. Lets understand how.
+
+# Accounts on Solana
+
+### Accounts
+
+On the Solana blockchain, an "account" is a fundamental data structure used to store various types of information.
+
+1. **Data Storage**: Accounts on Solana are used to store data required by programs (smart contracts) or to maintain state
+2. **Lamports**: Accounts hold a balance of Solana's native cryptocurrency, lamports. Lamports are used to pay for transaction fees and to rent the space that the account occupies on the blockchain.
+3. **Programs:** On Solana, programs are special accounts that contain executable code. These accounts are distinct from regular data accounts in that they are designed to be executed by the blockchain when triggered by a transaction.
+
+**Account with `data` and `lamports` but no data -** https://explorer.solana.com/address/4GQsAP5jYi5ysGF1GEnWiV3zJHZLRcLWhLCSuim6aAkL
+
+**Account with `lamports` but no data -** https://solscan.io/account/Eg4F6LW8DD3SvFLLigYJBFvRnXSBiLZYYJ3KEePDL95Q
+
+**Program -** https://solscan.io/account/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
