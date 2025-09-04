@@ -1,3 +1,46 @@
+## What are Tokens?
+
+Tokens are digital assets created and managed on a blockchain. They can represent currency, ownership, access rights, or other assets. On platforms like Solana or Ethereum, tokens are used for payments, governance, or utility within decentralized applications.
+
+### Types of Tokens
+
+- **Fungible Tokens:** Identical and interchangeable (e.g., cryptocurrencies like USDC, SOL).
+- **Non-Fungible Tokens (NFTs):** Unique and non-interchangeable (e.g., digital art, collectibles).
+
+## How to Create Tokens
+
+### On Solana
+
+1. Install the Solana CLI and SPL Token CLI.
+2. Generate a wallet/keypair.
+3. Use the SPL Token CLI to create a new token:
+
+```
+spl-token create-token
+```
+
+4. Create an account to hold the token:
+
+```
+spl-token create-account <TOKEN_MINT_ADDRESS>
+```
+
+5. Mint tokens to your account:
+
+```
+spl-token mint <TOKEN_MINT_ADDRESS> <AMOUNT>
+```
+
+### On Ethereum
+
+- Write a smart contract (usually using the ERC-20 or ERC-721 standard).
+- Deploy the contract to the Ethereum network.
+- Interact with the contract to mint, transfer, or manage tokens.
+
+---
+
+For more details or code examples, ask for specific platform instructions.
+
 ## Context of todays class
 
 1. Understanding what ETH and SOL solve over Bitcoin
