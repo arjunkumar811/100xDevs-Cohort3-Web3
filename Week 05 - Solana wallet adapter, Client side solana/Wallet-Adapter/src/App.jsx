@@ -19,8 +19,16 @@ function App() {
 
   return (
     <>
-     hi there
-     <Airdrop/>
+     <ConnectionProvider endpoint={"https://api.devnet.solana.com"} >
+            <WalletProvider wallets={[]} autoConnect>
+                <WalletModalProvider>
+                    <WalletMultiButton />
+                    <WalletDisconnectButton />
+                    <Airdrop/>
+                    { /* Your app's components go here, nested within the context providers. */ }
+                </WalletModalProvider>
+            </WalletProvider>
+        </ConnectionProvider>
     </>
   )
 }
