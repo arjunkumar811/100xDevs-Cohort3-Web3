@@ -37,6 +37,80 @@ The **System Program** is a core native program that handles fundamental operati
 - `SystemProgram.transfer()` - Transfers lamports between accounts
 - `SystemProgram.assign()` - Changes account ownership
 
+**Code Examples:**
+
+1. **Create Account with Rent:**
+```javascript
+const { Keypair, Connection, SystemProgram, Transaction } = require('@solana/web3.js');
+
+const payer = Keypair.fromSecretKey(/* your secret key */);
+const connection = new Connection("https://api.devnet.solana.com");
+
+async function createAccount() {
+    const newAccount = Keypair.generate();
+    const TOTAL_BYTES = 165;
+    const lamports = await connection.getMinimumBalanceForRentExemption(TOTAL_BYTES);
+    
+    const transaction = new Transaction();
+    transaction.add(
+        SystemProgram.createAccount({
+            fromPubkey: payer.publicKey,
+            newAccountPubkey: newAccount.publicKey,
+            lamports: lamports,
+            space: TOTAL_BYTES,
+            programId: SystemProgram.programId,
+        })
+    );
+    
+    await connection.sendTransaction(transaction, [payer, newAccount]);
+    console.log(`New account created at ${newAccount.publicKey.toBase58()}`);
+}
+```
+
+2. **Transfer Lamports:**
+```javascript
+async function transferLamports() {
+    const recipient = Keypair.generate();
+    const lamports = await connection.getMinimumBalanceForRentExemption(0);
+    
+    const transaction = new Transaction();
+    transaction.add(
+        SystemProgram.transfer({
+            fromPubkey: payer.publicKey,
+            toPubkey: recipient.publicKey,
+            lamports,
+        })
+    );
+    
+    await connection.sendTransaction(transaction, [payer]);
+    console.log(`Transferred to ${recipient.publicKey.toBase58()}`);
+}
+```
+
+3. **Create Account with Custom Owner:**
+```javascript
+async function createAccountWithCustomOwner() {
+    const newAccount = Keypair.generate();
+    const customOwner = Keypair.generate();
+    const TOTAL_BYTES = 165;
+    const lamports = await connection.getMinimumBalanceForRentExemption(TOTAL_BYTES);
+    
+    const transaction = new Transaction();
+    transaction.add(
+        SystemProgram.createAccount({
+            fromPubkey: payer.publicKey,
+            newAccountPubkey: newAccount.publicKey,
+            lamports: lamports,
+            space: TOTAL_BYTES,
+            programId: customOwner.publicKey, // Custom owner instead of System Program
+        })
+    );
+    
+    await connection.sendTransaction(transaction, [payer, newAccount]);
+    console.log(`Account created with custom owner: ${newAccount.publicKey.toBase58()}`);
+}
+```
+
 ### BPF Loader Program
 The **BPF Loader** is the program designated as the "owner" of all other programs on the network (excluding Native Programs). It handles:
 - **Program Deployment**: Deploys custom programs to the Solana network
