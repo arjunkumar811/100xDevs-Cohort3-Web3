@@ -1,13 +1,29 @@
-# Owners, Authorities, and Common Solana Programs
+# Accounts, Owners, Authorities, and Common Solana Programs
 
-## 1. Concept of Owners
+## 1. Accounts
+On Solana, all data is stored in "accounts" - similar to a key-value store where each entry is an account identified by a unique 32-byte address (Ed25519 PublicKey).
+
+**Key Properties:**
+- **Size Limit**: Up to 10MB of data storage
+- **Rent Requirement**: SOL deposit proportional to data stored (refundable when closed)
+- **AccountInfo Structure**: Contains lamports, data, owner, executable flag, and rent epoch
+- **Types**: 
+  - Program accounts (executable code, stateless)
+  - Data accounts (program state, created by programs)
+
+**Account Examples:**
+- [Empty Account](https://explorer.solana.com/address/5gjLjKtBhDxWL4nwGKprThQwyzzNZ7XNAVFcEtw3rD4i) (System Program owned)
+- [Token Account](https://explorer.solana.com/address/8FQvjBxFdR51wbZfQVaWbkjR2sNNxDLyabNePPmsyou9) (Token Program owned)
+- [Program Account](https://explorer.solana.com/address/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA) (BPF Loader owned)
+
+## 2. Concept of Owners
 In Solana, every account has an owner, which is usually a program. The owner program controls how the account's data can be modified. Only the owner program can change the account's data or transfer its lamports (Solana's native token).
 
-## 2. Owners vs Authorities
+## 3. Owners vs Authorities
 - **Owner**: The program that controls the account's logic and permissions. Only the owner program can update the account.
 - **Authority**: A public key (user or another account) that has permission to perform specific actions, like minting tokens or transferring assets. Authorities are set by the owner program and can be changed according to program logic.
 
-## 3. Common Solana Programs
+## 4. Common Solana Programs
 
 ### System Program
 The **System Program** is a core native program that handles fundamental operations:
