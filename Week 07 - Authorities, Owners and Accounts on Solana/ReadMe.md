@@ -22,7 +22,12 @@ The **System Program** is a core native program that handles fundamental operati
 - `SystemProgram.assign()` - Changes account ownership
 
 ### BPF Loader Program
-Used to deploy and upgrade Solana programs (smart contracts).
+The **BPF Loader** is the program designated as the "owner" of all other programs on the network (excluding Native Programs). It handles:
+- **Program Deployment**: Deploys custom programs to the Solana network
+- **Program Upgrades**: Manages upgrades to existing programs
+- **Program Execution**: Executes custom programs when called
+
+**Example Program**: [Deployed Program](https://explorer.solana.com/address/8rpHNPsyEJQEJjC2waWvUXyvCkYghCZndACoXs9sNKZg?cluster=devnet) on Solana Devnet
 
 ### Token Program
 Manages fungible and non-fungible tokens, including minting, transferring, and burning.
