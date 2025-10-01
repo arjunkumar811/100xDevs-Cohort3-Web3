@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 // wallet adapter imports
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
