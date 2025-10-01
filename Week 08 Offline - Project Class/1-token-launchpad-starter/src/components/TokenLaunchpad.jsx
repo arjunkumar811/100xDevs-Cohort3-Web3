@@ -5,29 +5,29 @@ import { Connection, Keypair, PublicKey, SystemProgram, Transaction } from "@sol
 
 
 export function TokenLaunchpad() {
-    const connection = useConnection();
-const wallet = useWallet();
+    const { connection } = useConnection();
+    const wallet = useWallet();
 
    async function CreateToken() {
    const mintAccount = Keypair.generate();
-   lamports = await getMinimumBalanceForRentExemptAccount(Connection)
+   const lamports = await getMinimumBalanceForRentExemptAccount(connection);
 
-const transaction = new Transaction(Connection).add(
+const transaction = new Transaction().add(
     SystemProgram.createAccount({
         fromPubkey: wallet.publicKey,
-        mintAccount: mintAccount.publicKey,
+        newAccountPubkey: mintAccount.publicKey,
         space: MINT_SIZE,
         lamports,
         programId: TOKEN_2022_PROGRAM_ID
     }),
-    createInitializeMint2Instruction(mintAccount.publicKey, wallet.publicKey, 9, wallet.publicKey, TOKEN_2022_PROGRAM_ID)
+    createInitializeMint2Instruction(mintAccount.publicKey, 9, wallet.publicKey, wallet.publicKey, TOKEN_2022_PROGRAM_ID)
 )
          transaction.feePayer = wallet.publicKey;
          transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
-         transaction.partialSign(mintKeypair);
+         transaction.partialSign(mintAccount);
 
          await wallet.sendTransaction(transaction, connection);
-         console.log(`Token mint created at ${mintKeypair.publicKey.toBase58()}`);
+         console.log(`Token mint created at ${mintAccount.publicKey.toBase58()}`);
 
     }
 
