@@ -1,14 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+async function getBalance() {
+const res = await client.getBalance("");
+console.log(res);
+}
 
   return (
     <>
-      hi there
+   
+  <button onClick={getBalance}>Get Balance</button>
     </>
   )
 }
