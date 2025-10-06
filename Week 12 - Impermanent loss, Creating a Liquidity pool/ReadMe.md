@@ -1,0 +1,1 @@
+12.1 | Impermanent loss, Creating a Liquidity pool
