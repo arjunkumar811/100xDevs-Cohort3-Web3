@@ -28,7 +28,8 @@ contract Cal {
     }
 
     function div(uint _value) public  {
-        num /= _value;
+        require(_value != 0 "value can not be 0")
+        num = num / _value;
     }
 
     function getSum() public view returns (uint) {
