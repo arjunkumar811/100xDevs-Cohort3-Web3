@@ -1,5 +1,6 @@
-// Function
+/* Try finishing the Calculator contract
 
+(add, multiply, divide, subtract, getValue)  */
 
 
 // SPDX-License-Identifier: GPL-3.0
@@ -18,10 +19,21 @@ contract Cal {
         num += _value;
     }
 
+    function sub(uint _value) public  {
+        num -= _value;
+    }
+
+    function mul(uint _value) public  {
+        num *= _value;
+    }
+
+    function div(uint _value) public  {
+        num /= _value;
+    }
+
     function getSum() public view returns (uint) {
         return num;
     }
 
 
 } 
-
