@@ -1,0 +1,1 @@
+Solidity part 2 (offline)
