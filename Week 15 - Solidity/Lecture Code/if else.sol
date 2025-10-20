@@ -1,7 +1,7 @@
 
 
 
-function (unit256[] memory _number){
+function (unit256[] memory _number) public pure returns (string memory){
 
 if(_number < 10){
     return "Small";
