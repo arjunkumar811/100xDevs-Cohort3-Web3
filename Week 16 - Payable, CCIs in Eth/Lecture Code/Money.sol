@@ -3,7 +3,7 @@
 pragma solidity ^0.8.26;
 
 contract Money {
-uint totalMoney;
+uint public totalMoney;
 
     function deposit() public  payable {
         totalMoney += msg.value;
@@ -11,5 +11,6 @@ uint totalMoney;
 
     function drain(address payable ad) public {
       payable(ad).transfer(totalMoney);
+      totalMoney = 0;
     }
 }
