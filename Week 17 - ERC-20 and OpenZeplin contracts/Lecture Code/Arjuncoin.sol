@@ -36,8 +36,16 @@ function Transfer(uint amount, address to) public {
 
 }
 
+function Burn (uint amount) public {
+  uint balance = balance[msg.sender];
+  require(balance >= amount);
+  balance[msg.sender] -= amount;
+  TotalSupply -= amount
+}
+
 }
 
 // Mint
 // MintTO
 // Transfer
+// Burn
