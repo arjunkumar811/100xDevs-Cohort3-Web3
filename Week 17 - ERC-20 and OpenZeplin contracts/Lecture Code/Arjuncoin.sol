@@ -22,6 +22,7 @@ function mint(uint amount) public {
 }
 
 
+
 function mintTo(uint amount , address to) public {
 require(owner == msg.sender);
 balance[to] += amount; // increase owner bal of to
@@ -49,3 +50,30 @@ function Burn (uint amount) public {
 // MintTO
 // Transfer
 // Burn
+
+function mint(uint amount) public payable {
+  require(msg.sender == owner);
+  balance[owner] += amount;
+  TotalSupply  += amount;
+}
+
+function mintTo(uint amount, address to) public payable {
+require(owner == msg.sender);
+balance[to] += amount;
+TotalSupply += amount;
+}
+
+
+function transfer(uint amount, address to) public payable {
+  uint exist = balance[msg.sender];
+  require(exist >= amount)
+balance[msg.sender] -= amount;
+balance[to] += amount
+}
+
+function Burn (uint amount) {
+   uint balance = balance[msg.sender];
+  require(balance >= amount);
+  balance[msg.sender] -= amount;
+  TotalSupply -= amount
+}
