@@ -139,3 +139,25 @@ fn sum(a: u16, b: u16) -> u16 {
 //     }
 //     return first_name;
 // }
+
+
+
+
+// Mutable vs immutable variables
+
+// fn main() {
+//     let x = 5;
+//     println!("The value of x is: {x}");
+//     x = 6;
+//     println!("The value of x isa {x}");
+// }
+
+
+
+
+// fn main() {
+//     let mut x = 5;
+//     println!("The value of x is: {x}");
+//     x = 6;
+//     println!("The value of x isa {x}");
+// }
