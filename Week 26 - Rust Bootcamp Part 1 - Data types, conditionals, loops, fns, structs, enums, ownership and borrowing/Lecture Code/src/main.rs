@@ -1,3 +1,4 @@
+
 /* fn main() {
     println!("Hello, world!");
     let ans: u16 = sum(1, 2);
@@ -13,9 +14,22 @@ fn sum(a: u16, b: u16) -> u16 {
 
 */
 
+// NUmbers
+
+fn main() {
+    let x: i32 = 1;
+    println!("{}", x);
+}
+
+
+
+
+
+
+
 
 //Bool
-
+/* 
 fn main() {
     let ans: bool = is_even(10);
     println!("{}", ans);
@@ -24,3 +38,5 @@ fn main() {
 fn is_even (a: u32) -> bool {
     return a % 2 == 0;
 }
+
+    */
