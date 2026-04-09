@@ -161,3 +161,16 @@ fn sum(a: u16, b: u16) -> u16 {
 //     x = 6;
 //     println!("The value of x isa {x}");
 // }
+
+
+
+// Function
+
+// fn sum(x: i32) -> i32 {
+//     return a + b;
+// }
+
+
+
+// Ownership of heap variables
+
