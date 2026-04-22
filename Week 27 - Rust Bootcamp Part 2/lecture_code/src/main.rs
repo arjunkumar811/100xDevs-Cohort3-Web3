@@ -43,7 +43,7 @@
 
 // Structs
 
-// Class in javascript
+// Object in javascript
 // function main() {
 //     let r = {
 //         width = 20,
@@ -57,16 +57,75 @@
 // Struct in Rust
 
 
-struct Rect {
-    width: f32,
-    height: f32
+// struct Rect {
+//     width: f32,
+//     height: f32
+// }
+
+// fn main() {
+//     let r: Rect = Rect {
+//          width: 20.0,
+//          height: 20.0
+//     };
+
+//     println!("{}, {}", r.width, r.height);
+// }
+
+
+
+// Class on javascript
+
+// class Rect {
+//     constructor(w, h){
+//         this.width = w;
+//         this.height = h;
+
+// area() {
+//     return this.height * this.width
+// }
+
+
+// perimeter() {
+//     return 2 * (this.height + this.width)
+// }
+
+
+//     }
+
+// }
+
+// let r = new Rect(10, 10);
+// console.log(r.perimeter())
+// console.log(r.area())
+
+
+
+struct User {
+    name: String,
+    age: u32
 }
 
-fn main() {
-    let r: Rect = Rect {
-         width: 20.0,
-         height: 20.0
+fn main () {
+    let user1: User  = User {
+            name: String::from("Arjun"),
+            age: 18
     };
 
-    println!("{}, {}", r.width, r.height);
+
+    let user2: User  = User {
+            name: String::from("Kumar"),
+            age: 13
+    };
+
+    print!("{}", is_allowed_to_vote(user1));
+    print!("{}", is_allowed_to_vote(user2));
+
+
+}
+
+fn is_allowed_to_vote(u: User) -> bool {
+    if u.age >= 18 {
+        return  true;
+    } 
+    false
 }
