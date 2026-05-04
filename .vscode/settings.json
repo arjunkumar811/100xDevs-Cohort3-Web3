@@ -1,0 +1,6 @@
+{
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.linkedProjects": [
+        "Week 27 - Rust Bootcamp Part 2/lecture_code/Cargo.toml"
+    ]
+}
