@@ -18,8 +18,13 @@ Projects   (Client side)
    
 Projects (Contract - Side)
 1.Crypto Centralized Exchange 
+
 2.Crypto payment gateway
+
 3.Creating a cloud wallet
+
 4.Creating betterstack in Rust 
+
 5.ETH end to end app
+
 6.Building a proxy staking contract
