@@ -28,3 +28,7 @@ Projects (Contract - Side)
 5.ETH end to end app
 
 6.Building a proxy staking contract
+
+7.Prediction Markets
+
+8.Perps 
